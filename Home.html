@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="Images/Borac 1.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="home.css">
+     <title>Home-NK Borac Bakar</title>
+   </head>
+<body background="Images/Borac 1.png" link="#000" alink="#017bf5" vlink="#000">
+  <div class="sidebar">
+    <div class="logo-details">
+      <a href="Home.html" class="navbar-brand"> <img src="Logo.svg" alt="logo" height="70"></a>
+        <div class="logo_name">Nk Borac Bakar</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="Home.html">
+            <i class='bx bx-home' ></i>
+          <span class="links_name" href="Home.html">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="Team.html">
+        <i class='bx bx-body' ></i>
+         <span class="links_name" href="Team.html">Team</span>
+       </a>
+       <span class="tooltip">Team</span>
+     </li>
+     <li>
+        <a href="Table.html">
+            <i class='bx bx-football' ></i>
+          <span class="links_name" href="Table.html" >Table</span>
+        </a>
+        <span class="tooltip">Table</span>
+      </li>
+     <li>
+       <a href="About us.html">
+        <i class='bx bx-question-mark' ></i>
+         <span class="links_name" href="About us.html">About us</span>
+       </a>
+       <span class="tooltip">About us</span>
+     </li>
+     
+     <li>
+       <a href="Sponsors.html">
+        <i class='bx bx-user' ></i>
+         <span class="links_name" href="Sponsors.html">Sponsors</span>
+       </a>
+       <span class="tooltip">Sponsors</span>
+     </li>
+     <li>
+       <a href="Contacts.html">
+        <i class='bx bx-phone' ></i>
+         <span class="links_name" href="Contacts.html">Contacts</span>
+       </a>
+       <span class="tooltip">Contacts</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <div class="name_job">
+            <div class="name">David Golić</div>
+            <div class="job">Copyright©2022</div>
+          </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+
+  <section class="home-section">
+
+    <div class="banner-area">
+      <h2>We are Borac Bakar</h2>
+      <a href="Contacts.html" class="btn">Contact us</a>
+    </div>
+    
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{ 
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+
+  
+</body>
+</html>

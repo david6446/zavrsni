@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sponsors.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sponsors-Nk Borac Bakar</title>
+     <link rel="icon" type="image/png" href="Images/Borac 1.png">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <a href="Home.html" class="navbar-brand"> <img src="Logo.svg" alt="logo" height="70"></a>
+        <div class="logo_name">Nk Borac Bakar</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="Home.html">
+            <i class='bx bx-home' ></i>
+          <span class="links_name" href="Home.html">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="Team.html">
+        <i class='bx bx-body' ></i>
+         <span class="links_name" href="Team.html">Team</span>
+       </a>
+       <span class="tooltip">Team</span>
+     </li>
+     <li>
+        <a href="Table.html">
+            <i class='bx bx-football' ></i>
+          <span class="links_name" href="Table.html" >Table</span>
+        </a>
+        <span class="tooltip">Table</span>
+      </li>
+     <li>
+       <a href="About us.html">
+        <i class='bx bx-question-mark' ></i>
+         <span class="links_name" href="About us.html">About us</span>
+       </a>
+       <span class="tooltip">About us</span>
+     </li>
+     
+     <li>
+       <a href="Sponsors.html">
+        <i class='bx bx-user' ></i>
+         <span class="links_name" href="Sponsors.html">Sponsors</span>
+       </a>
+       <span class="tooltip">Sponsors</span>
+     </li>
+     <li>
+       <a href="Contacts.html">
+        <i class='bx bx-phone' ></i>
+         <span class="links_name" href="Contacts.html">Contacts</span>
+       </a>
+       <span class="tooltip">Contacts</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+          
+           <div class="name_job">
+            <div class="name">David Golić</div>
+            <div class="job">Copyright©2022</div>
+          </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      
+  
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="Images/HNS.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="Images/Trans.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="Images/Tunera.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="Images/Bakar.jpg" style="width:100%">
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+
+
+</body>
+</html>
